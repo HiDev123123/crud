@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Student{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="row m-5 justify-content-center">
+    <center class="mb-3">
+      <h2>Student</h2>
+    </center>
+    <div class="col-10 text-center">
+      <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Sl No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Class</th>
+                <th scope="col">Roll No</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <th scope="row">{{ loop.index }}</th>
+                <td>{{ student['name'] }}</td>
+                <td>{{ student['dob'] }}</td>
+                <td>{{ student['email'] }}</td>
+                <td>{{ student['phone'] }}</td>
+                <td>{{ student['class'] }}</td>
+                <td>{{ student['roll'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    </div>
+  </div>
+</div>
+{% endblock %}
