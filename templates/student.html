@@ -11,31 +11,31 @@
     <div class="col-10 text-center">
       <table class="table">
         <thead>
-            <tr>
-                <th scope="col">Sl No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Date of Birth</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Class</th>
-                <th scope="col">Roll No</th>
-            </tr>
+          <tr>
+            <th scope="col">Sl No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Class</th>
+            <th scope="col">Roll No</th>
+          </tr>
         </thead>
         <tbody>
-            {% for student in students %}
-            <tr>
-                <th scope="row">{{ loop.index }}</th>
-                <td>{{ student['name'] }}</td>
-                <td>{{ student['dob'] }}</td>
-                <td>{{ student['email'] }}</td>
-                <td>{{ student['phone'] }}</td>
-                <td>{{ student['class'] }}</td>
-                <td>{{ student['roll'] }}</td>
-            </tr>
-            {% endfor %}
+          {% for student in students %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+            <td>{{ student[5] }}</td>
+            <td>{{ student[6] }}</td>
+          </tr>
+          {% endfor %}
         </tbody>
-    </table>
-    
+      </table>
+
     </div>
   </div>
 </div>
