@@ -50,8 +50,8 @@ def add_student():
             print(f"Error: {e}")
             return redirect(url_for('error_page'))
     
-    # display student table
-@app.route('/students')
+# display student table    
+@app.route('/student')
 def student_list():
     db = get_db()
     cursor = db.execute('SELECT * FROM student')
